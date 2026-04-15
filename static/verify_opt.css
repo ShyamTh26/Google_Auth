@@ -1,0 +1,94 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Page background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card container */
+.otp-container {
+    background: #ffffff;
+    padding: 30px 35px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Heading */
+.otp-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Username text */
+.otp-container p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Error message */
+.error-msg {
+    color: #e63946;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* OTP input */
+.otp-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.otp-container input[type="text"]:focus {
+    border-color: #4b6cb7;
+}
+
+/* Verify button */
+.otp-container button {
+    width: 100%;
+    padding: 12px;
+    background: #4b6cb7;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.otp-container button:hover {
+    background: #3a55a3;
+}
+
+/* Back link */
+.back-link {
+    display: block;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #4b6cb7;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

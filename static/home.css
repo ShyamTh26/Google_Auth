@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 40%);
+    color: #223;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navigation Bar Styles */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 16px;
+    z-index: 60;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px) saturate(120%);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(35,41,61,0.08);
+    margin: 0.5rem 1rem;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand-link {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    color: #2b2d42;
+    text-decoration: none;
+}
+
+/* Middle - About Links */
+.nav-center {
+    display:flex;
+    gap:1rem;
+    align-items:center;
+}
+
+/* Right Side - Auth Links */
+.nav-actions {
+    display:flex;
+    gap:0.75rem;
+    align-items:center;
+}
+
+/* Navigation Links */
+/* Nav items */
+.nav-item {
+    color: #334155;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.nav-item:hover{ background: rgba(52,152,219,0.06); color:#0b76d1 }
+
+/* Buttons */
+.btn {
+    display:inline-block;
+    padding:0.5rem 1rem;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.btn-primary{ background: linear-gradient(90deg,#5ec8ff,#7b61ff); color:white; box-shadow: 0 6px 18px rgba(123,97,255,0.18)}
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 12px 30px rgba(123,97,255,0.16)}
+.btn-ghost{ background:transparent; color:#334155 }
+.btn-outline{ border:1px solid rgba(51,65,85,0.08); background:transparent; color:#334155 }
+.btn-xl{ padding: 0.9rem 1.4rem; border-radius:12px; font-size:1rem }
+
+
+/* Main Content */
+
+.main{
+    padding:2.5rem 0;
+}
+
+.section{ background:transparent; margin:2rem 0; text-align:center }
+.section h2{ font-size:1.6rem; color:#1f2937; margin-bottom:0.5rem }
+.section-sub{ color:#475569; margin-bottom:1.25rem }
+
+.hero{ padding:3.5rem 0; }
+.hero-inner{ display:flex; align-items:center; gap:2rem; justify-content:space-between }
+.hero-copy{ max-width:52%; }
+.hero h1{ font-size:2.4rem; line-height:1.05; color:#0f1724; margin-bottom:0.75rem }
+.lead{ color:#475569; font-size:1.05rem; margin-bottom:1rem }
+.hero-ctas{ display:flex; gap:0.75rem; margin-top:1rem }
+.hero-visual{ transform:translateY(-6px); }
+
+.cards{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.25rem }
+.card{ background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(249,250,252,0.8)); padding:1.4rem; border-radius:12px; box-shadow: 0 8px 20px rgba(16,24,40,0.05); text-align:left }
+.card h3{ color:#0b76d1; margin-bottom:0.5rem }
+.card p{ color:#475569; line-height:1.5 }
+
+.about{ max-width:900px; margin:1.5rem auto; text-align:center }
+
+.site-footer{ padding:1.25rem 0; margin-top:2rem }
+.footer-inner{ display:flex; justify-content:space-between; gap:1rem; align-items:center; color:#64748b }
+.footer-links a{ color:#64748b; text-decoration:none; margin-left:0.75rem }
+
+
+@media (max-width: 900px){
+    .hero-inner{ flex-direction:column; align-items:center }
+    .hero-copy{ max-width:100%; text-align:center }
+    .hero-visual{ display:none }
+    .footer-inner{ flex-direction:column; gap:0.5rem; text-align:center }
+}
+
+@media (max-width:480px){
+    .nav-item{ display:none }
+    .brand-link{ font-size:1rem }
+    .btn-xl{ padding:0.7rem 1rem }
+}
+
+/* small focus states */
+.btn:focus,.nav-item:focus{ outline:3px solid rgba(59,130,246,0.12); outline-offset:3px }
+
+/* utility */
+.hidden{ display:none }
